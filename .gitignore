@@ -1,0 +1,46 @@
+/node_modules
+/public/hot
+/public/storage
+/public/js
+/public/css
+/public/fonts
+/public/images
+/storage/*.key
+/vendor
+.env
+.env.backup
+.phpunit.result.cache
+docker-compose.override.yml
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+supervisord.log
+supervisord.pid
+/docker
+.DS_Store
+/dist
+
+# local env files
+.env.local
+.env.*.local
+
+# Log files
+yarn-debug.log*
+
+# Editor directories and files
+.idea
+.vscode/*
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+!.vscode/*.code-snippets
+
+# script
+/vuexy-scripts
+
+# Docs
+/docs/.temp
