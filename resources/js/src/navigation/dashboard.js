@@ -10,7 +10,7 @@ export default [
     icon: 'HomeIcon',
   },
     {
-        header: 'System_Users',
+        header: 'System Setup',
     },
     {
         title: 'Employee',
@@ -53,73 +53,73 @@ export default [
     header: 'System_Setup',
   },
   {
-    title: 'Organizations',
+    title: 'Resorts',
     icon: 'CopyIcon',
     allows: (gate.hasPermission('read organizations') || gate.hasPermission('write organizations')),
     children: [
         {
-            title: 'Organizations',
+            title: 'Resorts',
             route: 'organizations',
             allows:gate.hasPermission('read organizations')
         },
         {
-            title: 'Add_organization',
+            title: 'Add Resort',
             route: 'add-organization',
             allows:gate.hasPermission('write organizations')
         },
     ],
   },
-    {
-        title: 'Branches',
-        icon: 'GitBranchIcon',
-        allows: (gate.hasPermission('read branches') || gate.hasPermission('write branches')),
-        children: [
-            {
-                title: 'Branch',
-                route: 'branches',
-                allows:gate.hasPermission('read branches'),
-            },
-            {
-                title: 'Add_Branch',
-                route: 'add-branch',
-                allows:gate.hasPermission('write branches'),
-            },
-        ],
+  //   {
+  //       title: 'Branches',
+  //       icon: 'GitBranchIcon',
+  //       allows: (gate.hasPermission('read branches') || gate.hasPermission('write branches')),
+  //       children: [
+  //           {
+  //               title: 'Branch',
+  //               route: 'branches',
+  //               allows:gate.hasPermission('read branches'),
+  //           },
+  //           {
+  //               title: 'Add_Branch',
+  //               route: 'add-branch',
+  //               allows:gate.hasPermission('write branches'),
+  //           },
+  //       ],
 
-    },
-    {
-        title: 'Department',
-        icon: 'PackageIcon',
-        allows: (gate.hasPermission('read departments') || gate.hasPermission('write departments')),
-        children: [
-          {
-            title: 'Department',
-            route: 'departments',
-            allows: gate.hasPermission('read departments')
-          },
-          {
-            title: 'Add_Department',
-            route: 'add-department',
-            allows: gate.hasPermission('write departments')
-          },
-        ],
-    },
-  {
-    title: 'Services',
-    icon: 'ServerIcon',
-    allows: (gate.hasPermission('read services') || gate.hasPermission('write services')),
-    children: [
-      {
-        title: 'Services',
-        route: 'services',
-        allows:gate.hasPermission('read services')
-      },
-      {
-        title: 'Add_Services',
-        route: 'add-service',
-        allows:gate.hasPermission('write services')
-      },
-    ],
-  },
+  //   },
+  //   {
+  //       title: 'Department',
+  //       icon: 'PackageIcon',
+  //       allows: (gate.hasPermission('read departments') || gate.hasPermission('write departments')),
+  //       children: [
+  //         {
+  //           title: 'Department',
+  //           route: 'departments',
+  //           allows: gate.hasPermission('read departments')
+  //         },
+  //         {
+  //           title: 'Add_Department',
+  //           route: 'add-department',
+  //           allows: gate.hasPermission('write departments')
+  //         },
+  //       ],
+  //   },
+  // {
+  //   title: 'Services',
+  //   icon: 'ServerIcon',
+  //   allows: (gate.hasPermission('read services') || gate.hasPermission('write services')),
+  //   children: [
+  //     {
+  //       title: 'Services',
+  //       route: 'services',
+  //       allows:gate.hasPermission('read services')
+  //     },
+  //     {
+  //       title: 'Add_Services',
+  //       route: 'add-service',
+  //       allows:gate.hasPermission('write services')
+  //     },
+  //   ],
+  // },
 
 ]

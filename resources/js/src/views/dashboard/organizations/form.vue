@@ -13,7 +13,7 @@
       <tab-content
         title="Details"
         icon="feather icon-file-text"
-      >
+    >
         <b-row>
           <!-- Logo -->
           <b-col
@@ -67,10 +67,10 @@
             class="mb-2"
           >
             <h5 class="mb-0">
-              Organization Details
+              Resort Details
             </h5>
             <small class="text-muted">
-              Enter Your Organization Details.
+              Enter Your Resort Details.
             </small>
           </b-col>
           <!-- Logo -->
@@ -241,7 +241,7 @@
         </b-row>
       </tab-content>
 
-      <!-- Organization address -->
+      <!-- Resort address -->
       <tab-content
         title="Address"
         icon="feather icon-map-pin"
@@ -252,10 +252,10 @@
             class="mb-2"
           >
             <h5 class="mb-0">
-              Organization Address
+              Resort Address
             </h5>
             <small class="text-muted">
-              Enter Your Organization Address.
+              Enter Your Resort Address.
             </small>
           </b-col>
           <!-- Address -->
@@ -283,128 +283,7 @@
               </label>
             </b-form-group>
           </b-col>
-          <!-- Latitude -->
-          <b-col cols="6">
-            <b-form-group
-              label="Latitude"
-              label-for="vi-latitude"
-            >
-              <b-input-group class="input-group-merge">
-                <b-input-group-prepend is-text>
-                  <feather-icon icon="MapIcon" />
-                </b-input-group-prepend>
-                <b-form-input
-                  id="vi-latitude"
-                  v-model="organization.lat"
-                  type="text"
-                  placeholder="Latitude"
-                />
-              </b-input-group>
-              <label
-                v-if="Object.keys(errors).length > 0 && errors.lat !== undefined"
-                class="text-danger"
-              >
-                {{ errors.lat[0] }}
-              </label>
-            </b-form-group>
-          </b-col>
-          <!-- Longitude -->
-          <b-col cols="6">
-            <b-form-group
-              label="Longitude"
-              label-for="vi-long"
-            >
-              <b-input-group class="input-group-merge">
-                <b-input-group-prepend is-text>
-                  <feather-icon icon="MapIcon" />
-                </b-input-group-prepend>
-                <b-form-input
-                  id="vi-long"
-                  v-model="organization.long"
-                  type="text"
-                  placeholder="Longitude"
-                />
-              </b-input-group>
-              <label
-                v-if="Object.keys(errors).length > 0 && errors.long !== undefined"
-                class="text-danger"
-              >
-                {{ errors.long[0] }}
-              </label>
-            </b-form-group>
-          </b-col>
-        </b-row>
-      </tab-content>
-
-      <!-- Organization chatbot -->
-      <tab-content
-        title="chatBot"
-        icon="feather icon-message-square"
-      >
-        <b-row>
-          <b-col
-            cols="12"
-            class="mb-2"
-          >
-            <h5 class="mb-0">
-              Organization chatBot
-            </h5>
-            <small class="text-muted">
-              Enter Your Organization chatBot.
-            </small>
-          </b-col>
-          <!-- token -->
-          <b-col cols="6">
-            <b-form-group
-              label="Token"
-              label-for="vi-token"
-            >
-              <b-input-group class="input-group-merge">
-                <b-input-group-prepend is-text>
-                  <feather-icon icon="ShieldIcon" />
-                </b-input-group-prepend>
-                <b-form-input
-                  id="vi-token"
-                  v-model="organization.token"
-                  type="text"
-                  placeholder="Token"
-                />
-              </b-input-group>
-              <label
-                v-if="Object.keys(errors).length > 0 && errors.token !== undefined"
-                class="text-danger"
-              >
-                {{ errors.token[0] }}
-              </label>
-            </b-form-group>
-          </b-col>
-          <!-- instance_id -->
-          <b-col cols="6">
-            <b-form-group
-              label="Instance Id"
-              label-for="vi-instance_id"
-            >
-              <b-input-group class="input-group-merge">
-                <b-input-group-prepend is-text>
-                  <feather-icon icon="SidebarIc on" />
-                </b-input-group-prepend>
-                <b-form-input
-                  id="vi-instance_id"
-                  v-model="organization.instance_id"
-                  type="text"
-                  placeholder="Instance Id"
-                />
-              </b-input-group>
-              <label
-                v-if="Object.keys(errors).length > 0 && errors.instance_id !== undefined"
-                class="text-danger"
-              >
-                {{ errors.instance_id[0] }}
-              </label>
-            </b-form-group>
-          </b-col>
-          <!-- temp_msg -->
-          <b-col cols="6">
+                    <b-col cols="12">
             <b-form-group
               label="Welcome Message"
               label-for="vi-temp_msg"
@@ -466,86 +345,51 @@
             </b-form-group>
           </b-col>
 
-            <!-- error_msg -->
-          <b-col cols="6">
-            <b-form-group
-              label="Error Message"
-              label-for="vi-error_msg"
-            >
-              <b-input-group class="input-group-merge">
-                <b-input-group-prepend is-text>
-                  <feather-icon icon="MessageCircleIcon" />
-                </b-input-group-prepend>
-                <b-form-textarea
-                  id="vi-error_msg"
-                  v-model="organization.error_msg"
-                  rows="5"
-                  type="text"
-                  placeholder="Error Message"
-                />
-              </b-input-group>
-              <label
-                v-if="Object.keys(errors).length > 0 && errors.error_msg !== undefined"
-                class="text-danger"
-              >
-                {{ errors.error_msg[0] }}
-              </label>
-            </b-form-group>
-          </b-col>
 
-            <!-- department_msg -->
-          <b-col cols="6">
-            <b-form-group
-              label="Department Message"
-              label-for="vi-dept_msg"
-            >
-              <b-input-group class="input-group-merge">
-                <b-input-group-prepend is-text>
-                  <feather-icon icon="MessageCircleIcon" />
-                </b-input-group-prepend>
-                <b-form-textarea
-                  id="vi-dept_msg"
-                  v-model="organization.department_msg"
-                  rows="5"
-                  type="text"
-                  placeholder="Department Message"
-                />
-              </b-input-group>
-              <label
-                v-if="Object.keys(errors).length > 0 && errors.department_msg !== undefined"
-                class="text-danger"
-              >
-                {{ errors.department_msg[0] }}
-              </label>
-            </b-form-group>
-          </b-col>
+      <b-col cols="6">
+                <b-form-group
+                    label="Government"
+                    label-for="vi-government"
+                >
+                    <b-input-group class="input-group-merge">
+                        <v-select
+                            placeholder="Government..."
+                            :options="governments"
+                            :reduce="gov => gov.id"
+                            label="name"
+                            @input="getGovCities"
+                        />
+                    </b-input-group>
+                    <label
+                        v-if="Object.keys(errors).length > 0 && errors.government !== undefined"
+                        class="text-danger"
+                    >
+                        {{this.errors.government[0]}}
+                    </label>
+                </b-form-group>
+            </b-col>
 
-            <!-- service_msg -->
-          <b-col cols="6">
-            <b-form-group
-              label="Sevice Message"
-              label-for="vi-service_msg"
-            >
-              <b-input-group class="input-group-merge">
-                <b-input-group-prepend is-text>
-                  <feather-icon icon="MessageCircleIcon" />
-                </b-input-group-prepend>
-                <b-form-textarea
-                  id="vi-service_msg"
-                  v-model="organization.service_msg"
-                  rows="5"
-                  type="text"
-                  placeholder="Sevice Message"
-                />
-              </b-input-group>
-              <label
-                v-if="Object.keys(errors).length > 0 && errors.service_msg !== undefined"
-                class="text-danger"
-              >
-                {{ errors.service_msg[0] }}
-              </label>
-            </b-form-group>
-          </b-col>
+            <b-col cols="6">
+                <b-form-group
+                    label="City"
+                    label-for="vi-city"
+                >
+                    <b-input-group class="input-group-merge">
+                        <v-select
+                            placeholder="City..."
+                            :options="cities"
+                            :reduce="city => city.id"
+                            label="name"
+                        />
+                    </b-input-group>
+                    <label
+                        v-if="Object.keys(errors).length > 0 && errors.city !== undefined"
+                        class="text-danger"
+                    >
+                        {{this.errors.city[0]}}
+                    </label>
+                </b-form-group>
+            </b-col>
 
         </b-row>
       </tab-content>
@@ -595,6 +439,8 @@ export default {
         input: '',
       search: '',
       errors: {},
+      governments:[],
+      cities:[],
       organization: {
         name: '',
         phone: '',
@@ -635,6 +481,9 @@ export default {
     },
   },
   methods: {
+    getGovCities(){
+
+    },
       append(emoji) {
       this.organization.temp_msg += emoji
     },
